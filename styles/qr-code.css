@@ -1,0 +1,90 @@
+@import "../reset.css";
+
+
+body{
+    background-color: var(--terciario-300);
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 32px;
+}
+header {
+    background-color: var(--primario-700);
+    /*Aqui eu fiz o cabeçalho*/
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+
+}
+
+.main {/*aqui eu fiz tiulo*/
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+    padding: 20px;
+    text-align: center;
+}
+
+.main__title {
+    /*aqui editei paragrafo*/
+    text-align: center;
+}
+
+.vantagens-cardapio {
+    border-radius: 6px;
+    padding: 35px;
+    background-color: var(--primario-600);
+    /* margin-left: 45px; */
+    display: grid;
+    place-items: center;
+    
+    /* width: min-content; */
+}
+
+.main__title2 {
+    font-size:20px;
+    padding: 15px;
+    color: var(--terciario-300);
+    font-family: var(--font-sans);
+    
+
+}
+
+.main__paragrafo2 {
+    padding: 15px;
+    font-family: var(--font-serif);
+    color: var(--terciario-300);
+}
+
+.main__paragrafo3 {
+    padding: 15px;
+    font-family: var(--font-serif);
+    color: var(--terciario-300);
+}
+
+.main2{
+    padding: 35px;
+    margin-left: 45px;
+}
+.main__title3{
+    font-size: 16px;
+    font-family: var(--font-sans);
+
+}
+
+
+.vantagens-cardapio__qualidade {
+    display: flex;
+    align-items: center;
+}
+
+.Invista-no__cardapio{
+    display: flex;
+    padding: 20px;
+}
+
+.main-titulo__invista{
+    font-family: var(--font-serif); 
+}
