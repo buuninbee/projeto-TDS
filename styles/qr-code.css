@@ -1,34 +1,45 @@
 @import "../reset.css";
 
 
-body{
+body {
     background-color: var(--terciario-300);
+    box-sizing: border-box;
+
 }
 
-.conteiner{
+.conteiner {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 0 32px;
+
 }
-header {
+
+header {/*Aqui eu fiz o cabeçalho*/
     background-color: var(--primario-700);
-    /*Aqui eu fiz o cabeçalho*/
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-sans);
     padding: 20px;
 
 }
 
-.main {/*aqui eu fiz tiulo*/
+.main__titulo {/*aqui foi feito o css do titulo da div main*/
     box-sizing: border-box;
     font-family: var(--font-sans);
     padding: 20px;
     text-align: center;
+    color: var(--primario-900);
+    font-size: 24px;
 }
 
-.main__title {
-    /*aqui editei paragrafo*/
+.main__paragrafo{
+    font-size: 24px;
+    text-align: center;
+    font-family: var(--font-serif);
+    color: var(--primario-900);
+}
+
+.gif{
     text-align: center;
 }
 
@@ -36,39 +47,39 @@ header {
     border-radius: 6px;
     padding: 35px;
     background-color: var(--primario-600);
-    /* margin-left: 45px; */
     display: grid;
     place-items: center;
-    
-    /* width: min-content; */
+
 }
 
-.main__title2 {
-    font-size:20px;
+.main-titulo__vantagens-cardapio {
+    font-size: 24px;
     padding: 15px;
-    color: var(--terciario-300);
+    color: var(--terciario-50);
     font-family: var(--font-sans);
-    
+    text-align: center;
+
 
 }
 
 .main__paragrafo2 {
     padding: 15px;
     font-family: var(--font-serif);
-    color: var(--terciario-300);
+    color: var(--terciario-50);
 }
 
 .main__paragrafo3 {
     padding: 15px;
     font-family: var(--font-serif);
-    color: var(--terciario-300);
+    color: var(--terciario-50);
 }
 
-.main2{
+.main2 {
     padding: 35px;
     margin-left: 45px;
 }
-.main__title3{
+
+.main__title3 {
     font-size: 16px;
     font-family: var(--font-sans);
 
@@ -80,11 +91,91 @@ header {
     align-items: center;
 }
 
-.Invista-no__cardapio{
+.Invista-no__cardapio {
     display: flex;
     padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--font-sans);
 }
 
-.main-titulo__invista{
-    font-family: var(--font-serif); 
+.main-titulo__invista {
+    font-family: var(--font-sans);
+    padding: 20px;
+    display: grid;
+    font-size: 24px;
+    color: var(--primario-900)
+}
+
+.ideia {
+    background-color: var(--terciario-900);
+    border-radius: 6px;
+    padding-top: 16px;
+    gap: 12px;
+}
+
+.main-titulo__ideia {
+    display: grid;
+    gap: 12px;
+    font-family: var(--font-sans);
+    color: var(--terciario-200);
+    padding-top: 16px;
+    font-size: 20px;
+    padding: 24px;
+}
+
+.main-paragrafo__ideia {
+    color: var(--terciario-200);
+    padding-top: 16px;
+    display: grid;
+    padding: 24px;
+    font-family: var(--font-serif);
+}
+
+.otimizar {
+    background-color: var(--primario-700);
+    border-radius:6px;
+    padding-top: 16px;
+    gap: 12px;
+    padding: 24px;
+    margin-top: 50px;
+}
+
+.main-titulo__otimizar {
+    color: var(--primario-50);
+    font-size: 20px;
+    gap: 12px;
+    font-family: var(--font-sans);
+    padding: 24px;
+}
+
+.main-paragrafo__otimizar {
+    color: var(--primario-50);
+    font-family: var(--font-serif);
+    gap: 12px;
+    padding: 24px;
+}
+
+footer {
+    background-color: var(--secundario-700);
+    margin-top: 50px;
+}
+
+.main-titulo__rodape{
+    padding: 24px;
+    color:#FFFFFF;
+    font-family: var(--font-sans );
+    font-family: 20px;
+}
+
+.main-paragrafo__rodape{
+    padding: 24px;
+    color: #FFFFFF;
+    font-family: var(--font-serif);
+    font-size: 20px;
+}
+
+.main-paragrafo__direitosreservado{
+    text-align: center;
+    color: #FFFFFF;
 }
