@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
+
 :root {
     --primario-50: #e6f0ee;
     --primario-100: #b0d0cb;
@@ -32,8 +34,16 @@
     --terciario-800: #8c8a7f;
     --terciario-900: #6b6961;
 
-    --font-sans: "Roboto mono, sans-serif";
-    --font-serif: "Roboto, Georgia, 'Times New Roman'";
+    --font-sans: "Roboto Mono", monospace;
+    --font-serif: "Roboto", Georgia, 'Times New Roman';
+
+    --texto-sm: 0.875rem; /*14px*/
+    --texto-base: 1rem; /*16px*/
+    --texto-lg: 1.125rem; /*18px*/
+    --texto-xl: 1.25rem; /*20px*/
+    --texto-2xl: 1.5rem; /*24px*/
+    --texto-3xl: 1.875rem; /*30px*/
+    --texto-4xl: 2.25rem; /*34px*/
 }
 
 *{
