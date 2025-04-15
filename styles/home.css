@@ -1,234 +1,336 @@
 @import "../reset.css";
 
-header{
+.header {
     background-color: var(--primario-700);
-    padding: 10px;
+    width: 100%;
+    position: fixed;
 }
-header img{
-    height: 30px;
-    margin-left: 15px;
-}
-.menu{
-    display:flex ;
+  
+.header__nav {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 14px 28px;
+    position: relative;
 }
 
-.menu_container{
+.header__item a{
+    color: var(--primario-50);
+}
+  
+.header__logo img {
+    max-width: 100%;
+}
+  
+.header__links {
     display: flex;
+    gap: 2rem;
     align-items: center;
 }
-
-.menu_list{
-    display: flex;
-    gap: 20px;
+  
+.header__menu {
+    display: none;
 }
-
-.menu_list li{
+  
+.header__menu--open {
+    display: flex;
+}
+  
+.header__list {
+    display: flex;
+    gap: 1rem;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}
+  
+.header__item {
+    transition: color 0.3s ease-in-out;
     list-style: none;
 }
 
-.menu_list a{
+.header__item a {
     text-decoration: none;
-    font-family: var(--font-sans, Roboto, Georgia, 'Times New Roman', serif);
-    color: var(--terciario-50);
+    transition: color 0.3s ease-in-out;
+}
+  
+
+.header__item:hover {
+color: var(--color-on-primary);
+}
+
+.header__cart {
+position: relative;
+margin-right: 0.75rem;
+}
+
+.header__cart-count {
+background-color: var(--color-primary);
+color: var(--color-on-primary);
+font-size: 10px;
+padding: 2px 6px;
+border-radius: 9999px;
+position: absolute;
+left: 1rem;
+bottom: 1rem;
+}
+
+.header__mobile-button {
+display: none;
+}
+
+@media (max-width: 1024px) {
+.header__list {
+    display: none;
+}
+
+.header__mobile-button {
+    display: block;
+    background-color: var(--primario-700);
+}
+
+.header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-secondary-container);
+    padding: 1.5rem;
+    z-index: 50;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header__menu--open {
+    display: flex;
+}
 }
 
 body{
     background-color: var(--terciario-400);
 }
-.main_intro{
+
+.intro{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 0 30px;
+    padding-bottom: 30px;
+    padding-top: 78px;
 }
 
-.main_intro_titulo{
+.intro__titulo{
     color: var(--primario-900);
     margin-top: 30px;
+    font-size:  var(--texto-xl);
     margin-bottom: 20px;
-    font-family: var(--font-sans, "Roboto Mono", sans-serif);
+    font-family: var(--font-sans);
 }
 
-.main_first_titulo{
-    text-align: center;
-    margin: 20px;
+.intro__paragrafo{
+    color: var(--primario-900);
+   font-size: var(--texto-lg);
+}
+
+.problemas__titulo,
+.solucoes__titulo{
     color: var(--secundario-500);
-    font-family: var(--font-sans, "Roboto Mono", sans-serif);
+    font-family: var(--font-sans);
+    font-size: var(--texto-2xl);
+    text-align: center;
 }
 
-.main_first_container{
+.solucoes__titulo{
+    color: var(--primario-800);
+
+}
+
+.problemas__cards, 
+.solucoes__cards{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+
+.problemas__card,
+.solucoes__card{
     display: flex;
-    flex-wrap: nowrap;
-    gap: 12px;
-    margin: 30px;
-    justify-content: center;
-}
-
-.main_first_card{
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 6px;
+    text-align: left;
+    gap: 6px;
     background-color: var(--secundario-500);
     color: var(--terciario-50);
-    padding: 15px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 6px;
-   }
-  
-
-.main_first_card img{
-    height: 25px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    
-}   
-
-.main_second_titulo{
-    text-align: center;
-    color: var(--primario-800);
-    margin: 20px;
-    font-family: var(--font-sans, "Roboto Mono", sans-serif);
+    padding: 18px 10px;
 }
 
-.main_second_container{
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 12px;
-    margin: 30px;
-    justify-content: center;
-}
-.main_second_card{
+.solucoes__card{
     background-color: var(--primario-700);
-    color: var(--terciario-50);
-    padding: 15px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 6px;
 }
 
-.main_second_card h3{
-    text-align: center;
-}
-
-.main_second_card img{
+.problemas__card img,
+.solucoes__cards img {
     height: 25px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    width: auro;
+    margin-bottom: 6px;
 }
 
-.main_third_titulo{
+.problemas__paragrafo,
+.solucoes__paragrafo{
+    font-size: var(--texto-lg);
+}
+
+.solucoes,
+.problemas{
+    display: grid;
+    margin: 0 30px;
+    grid-template-rows: auto;
+    gap: 16px;
+    padding-bottom: 30px;
+}
+
+
+.melhor-restaurante{
+    display: grid;
+    margin: 0 30px;
+    padding-bottom: 30px;
+}
+
+.melhor-restaurante__titulo{
+    font-family: var(--font-sans);
+    font-size: var(--texto-2xl);
     color: var(--primario-800);
     text-align: center;
-    margin: 20px;
-    font-family: var(--font-sans, "Roboto Mono", sans-serif);
 }
-.main_third_container{
-    display: flex;
-    margin: 30px;
-    gap: 30px;
+.melhor-restaurante__cards{
+    display: grid;
     justify-content: center;
+    gap: 30px;
 }
 
-.main_third_card{
+.melhor-restaurante__card{
+    display: grid;
+    grid-template-columns: 300px;
     background-color: var(--terciario-50);
     padding: 15px;
 }
 
+.melhor-restaurante__card img {
+    width: 300px;
+    height: auto;
+}
 
-.main_third_card_titulo{
-    font-size: 16px;
-    margin-left: 20px;
+.melhor-restaurante__textos{
+    display: grid;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+
+.melhor-restaurante__sub-titulo{
+    color: var(--primario-800);
+    font-size: var(--texto-xl);
+    text-align: start;
+}
+
+.melhor-restaurante__paragrafo{
+    font-size: var(--texto-lg);
     color: var(--primario-800);
 }
 
-.main_third_card_paragrafo{
-    margin-left: 20px;
-    margin-right: 12px;
-    text-justify: justify;
-    margin-bottom: 10px;
-    color: var(--primario-800);
-}
-
-.seta {
+.melhor-restaurante__ver-mais {
     display: flex;
     align-items: center; 
     gap: 8px; 
-    margin-left: 20px;
-  }
-  
-  .seta a {
     text-decoration: none;
-    color: var(--secundario-800);
-    font-weight: 500; 
-  }
+}
   
-  .seta img {
+.ver-mais__texto{
+    color: var(--secundario-800);
+    font-size: var(--texto-xl);  
+}
+  
+.melhor-restaurante__ver-mais img {
     height: 20px; 
     width: auto;
-  }
+}
 
-.main_fourth{
+.cardapio-digital{
+    display: grid;
+    gap: 30px;
     background-color: var(--primario-900);
     color: var(--terciario-50);
-    padding: 20px;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 30px;
 }
 
-.main_fourth_titulo{
-    text-align: left;
-    margin: 20px;
-    font-family: var(--font-sans, "Roboto Mono", sans-serif);
+.cardapio-digital__titulo{
+    font-size: var(--texto-2xl);
+    font-family: var(--font-sans);
 }
 
-.main_fourth_container{
+.cardapio-digital__cards{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-.main_fourth_container{
-    display: flex;
-    padding: 20px;
-}
-
-.main_fourth_card{
+.cardapio-digital__card{
+    display: grid;
+    gap: 14px;
     background-color: var(--primario-700);
     padding: 15px;
     border-radius: 6px;
 }
 
-.main_fourth_card img{
-    height: 38px;
-    margin-bottom: 5px;
+.cardapio-digital__card__paragrafo{
+    font-size: var(--texto-xl);
+    font-family: var(--font-serif);
+}
+
+footer{
+    background-color: var(--secundario-700);
+    color: var(--terciario-50);
 }
 
 .rodape{
-    margin-top: 35px;
-    background-color: var(--secundario-700);
-    color: var(--terciario-50);
-    padding: 40px;
-    text-align: center;
+    display: grid;
+    padding: 40px 30px;
+}
+
+.rodape__titulo{
+    font-size: var(--texto-xl);
+    padding-bottom: 30px;
 }
 
 .contato{
-    margin-top: 40px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: var(--font-sans, Roboto, Georgia, 'Times New Roman', serif);
+    display: flex;
+    font-family: var(--font-sans);
     font-size: 12px;
+    gap: 10px;
 }
 
-.contato_titulo{
-    font-family: var(--font-sans, Roboto, Georgia, 'Times New Roman', serif);
+.contato__titulo{
+    font-family: var(--font-serif);
+    font-size: var(--texto-xl);
 }
 
+.contato-meios{
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.contato-meios__tel, .contato-meios__email{
+    text-decoration: none;
+    font-size: var(--texto-base);
+    color: var(--primario-50);
+}
 .final{
-    margin-top: 40px;
-    font-family: var(--font-sans, Roboto, Georgia, 'Times New Roman', serif);
+    font-family: var(--font-serif);
+    text-align: center;
 }
 
 .button_fixed{
@@ -246,408 +348,100 @@ body{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (min-width: 390px){
-    .menu_list{
-        display: none;
-    }
-
-    .main_intro_titulo{
-        font-size: var(--texto-2xl);
-    }
-
-    .main_intro_paragrafo{
-        font-size: var(--texto-base);
-    }
-
-    .main_first_titulo{
-        font-size: var(--texto-2xl);
-    }
-
-    .main_first_container{
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    .main_first_card{
-        max-width: 166px;
-        max-height: 144px ;
-    }
-    
-    .main_second_titulo{
-        font-size: var(--texto-2xl);
-    }
-
-    .main_second_container{
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    .main_second_card{
-        max-width: 166px;
-        max-height: 160px ;
-    }
-    
-    .main_second_card_paragrafo{
-       font-size: var(--texto-base);
-    } 
-
-    .main_third_titulo{
-        font-size: var(--texto-2xl);
-    }
-
-    .main_third_container{
-        flex-wrap: wrap;
-    }
-
-    .main_third_card{
-        max-width: 350px;
-        max-height: 421px;
-    }
-    
-    .main_third_imagem{
-        height: 260px;
-        width: 330px;
-    }
-
-    .main.fourth_titulo{
-        font-size: var(--texto-2xl);
-    }
-
-    .main_fourth_container{
-        flex-wrap: wrap;
-        gap: 20px;
-    }
- 
-    .main_fourth_card_paragrafo{
-        font-size: var(--texto-xl);
-    }
-    
-    .rodape h2{
-        text-align: start;
-        font-size: var(--texto-xl);
-    }
-
-    .contato{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        font-size: var(--texto-base);
-    }
-
-    .contato_titulo{
-        font-size: var(--texto-xl); 
-    }
-    .final{
-        font-size: var(--texto-sm); 
-    }
-    }
-
 @media screen and (min-width: 640px){
-    .menu_list{
-        display: none;
-    }
-
-    .main_intro_titulo{
+    .intro__titulo, .problemas__titulo, .solucoes__titulo, .melhor-restaurante__titulo, .cardapio-digital__titulo, .rodape__titulo{
         font-size: var(--texto-3xl);
     }
 
-    .main_intro_paragrafo{
-        font-size: var(--texto-x1);
+    .intro__paragrafo{
+        font-size: var(--texto-2xl);
     }
 
-    .main_first_titulo{
-        font-size: var(--texto-3xl);
+    .problemas__card img,
+    .solucoes__card img{
+        height: 50px;
+        width: auto;
     }
 
-    .main_first_container{
-        flex-wrap: wrap;
-        margin: auto;
-    }   
-
-    .main_first_card{
-        max-width: 206px;
-        max-height: 140px ;
+    .problemas__paragrafo,
+    .solucoes__paragrafo{
+        font-size: var(--texto-2xl);
     }
 
-    .main_first_card_paragrafo{
-        font-size: var(--texto-1g);
+    .problemas__cards,
+    .solucoes__cards{
+        padding: 0 30px;
     }
 
-    .main_second_titulo{
-        font-size: var(--texto-3xl);
+    .melhor-restaurante__card{
+        grid-template-columns: 500px;
     }
 
-    .main_second_container{
-        flex-wrap: wrap;
-        margin: auto;
+    .melhor-restaurante__sub-titulo{
+        font-size: var(--texto-2xl);
     }
 
-    .main_second_card{
-        max-width: 206px;
-        max-height: 140px ;
-    }
-
-    .main_first_second_paragrafo{
-        font-size: var(--texto-1g);
-    }
-
-    .main_third_titulo{
-        font-size: var(--texto-3xl);
-    }
-
-    .main_third_card{
-        max-width: 496px;
-        max-height: 459px ;
-    }
-
-    .main_third_imagem{
-        width: 480px;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .main_third_card_titulo{
-        font-size: var(--texto-3xl);
-    }
-
-    .main_third_card_paragrafo{
+    .melhor-restaurante__paragrafo{
         font-size: var(--texto-xl);
     }
 
-    .main_fourth_titulo{
-        font-size: var(--texto-3xl);
+    .melhor-restaurante__card > img {
+        width: 400px;
+        display: block;
+        margin: 0 auto;
     }
 
-    .main_fourth_card_paragrafo{
+    .melhor-restaurante__textos{
+        padding-bottom: 16px;
+    }
+
+    .cardapio-digital{
+        padding: 30px 80px;
+    }
+
+    .cardapio-digital__card__paragrafo{
         font-size: var(--texto-2xl);
     }
 
-    .rodape h2{
-        font-size: var(--texto-2xl);
+    .contato__titulo{
+        font-size: var(--texto-xl);
     }
 
-    .contato{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        font-size: var(--texto-base);
-    }
-
-    .contato_titulo{
-        font-size: var(--texto-xl); 
-    }
-    .final{
-        font-size: var(--texto-sm); 
+    .contato-meios{
+        font-size: var(--texto-lg);
     }
 }
 
 @media screen and (min-width: 768px) {
-    .menu_list{
-        display: flex;
-        margin-right: 20px;
-    }
     
-    .menu_link{
-        display: none;
-    }
-
-    .main_intro_titulo{
-        font-size: var(--texto-3xl);
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .main_intro_paragrafo{
-        font-size: var(--texto-x1);
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .main_first_titulo{
-        font-size: var(--texto-3xl);
-    }    
-    
-    .main.first.container{
-        max-width: 708px;
-        max-height: 368px ;
-    }
-
-    .main_first_card{
-        max-width: 275px;
-        max-height: 200px ;
-    }
-
-    .main_first_card_paragrafo{
-        font-size: var(--texto-x1);
-    }
-
-    .main_second_container{
-        max-width: 708px;
-        max-height: 368px ;
-    }
-
-    .main_second_card{
-        max-width: 280px;
-        max-height: 200px ;
-    }
-
-    .main_second_card_paragrafo{
-        font-size: var(--texto-x1);
-    }
-
-    .main_third_titulo{
-        font-size: var(--texto-3xl);
-    }
-
-    .main_third_card{
-        max-width: 496px;
-        max-height: 471px ;
-    }
-
-    .main_third_imagem{
-        width: 480px;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .main_fourth_titulo{
-        font-size: var(--texto-3xl);
-    }
-
-    .main_fourth_card{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .main_fourth_card_paragrafo{
-        font-size: var(--texto-2xl);
-    }
-
-    .rodape h2{
-        font-size: var(--texto-2xl);
-    }
-
-    .contato{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        font-size: var(--texto-base);
-    }
-
-    .contato_titulo{
-        font-size: var(--texto-xl); 
-    }
-    .final{
-        font-size: var(--texto-x1); 
-    }
 }
 
 @media screen and (min-width: 1024px) {
-    .main_first_container{
-        flex-wrap: wrap;
-        margin: auto;
-        max-width: 800px;
-        max-height: 360px;
-    }   
-
-    .main_intro_titulo{
-        font-size: var(--texto-4xl);
-        margin-left: 30px;
-        margin-right: 30px;
+    .intro, .problemas, .solucoes, .melhor-restaurante, .cardapio-digital, .rodape{
+        margin: 0 72px;
+        max-width: 1024px;
+        justify-self: center;
+        padding-bottom: 60px;
     }
 
-    .main_intro_paragrafo{
-        font-size: var(--texto-2x1);
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .main_first_titulo{
-        font-size: var(--texto-4xl);
-    }    
-
-    .main_first_card{
-        max-width: 327px;
-        max-height: 176px ;
-    }
-
-    .main_first_card_paragrafo{
-        font-size: var(--texto-2x1);
-    }
-
-    .main_second_titulo{
+    .intro__titulo, .problemas__titulo, .solucoes__titulo, .melhor-restaurante__titulo, .cardapio-digital__titulo, .rodape__titulo{
         font-size: var(--texto-4xl);
     }
 
-    .main_second_container{
-        flex-wrap: wrap;
-        margin: auto;
-        max-width: 800px;
-        max-height: 360px;
+    .melhor-restaurante__cards{
+        grid-template-columns: repeat(2, auto);
     }
-
-    .main_second_card{
-        max-width: 327px;
-        max-height: 176px ;
-    }
-
-    .main_second_card_paragrafo{
-        font-size: var(--texto-2x1);
-    }
-
-    .main_third_titulo{
-        font-size: var(--texto-4xl);
-    }
-
-    .main_third_card{
-        max-width: 534px;
-        max-height: 427px ;
-    }
-
-    .main_third_imagem{
-        width: 518px;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .main_third_card_titulo{
-        font-size: var(--texto-2x1);
-    }
-
-    .main_third_card_paragrafo{
-        font-size: var(--texto-x1);
-    }
-
-    .main_fourth_titulo{
-        font-size: var(--texto-4xl);
-    }
-
-    .main_fourth_card{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .main_fourth_card_paragrafo{
-        font-size: var(--texto-2xl);
-    }
-
-    .rodape h2{
+    .intro__paragrafo{
         font-size: var(--texto-3xl);
     }
 
-    .contato{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        font-size: var(--texto-x1);
+    .problemas__paragrafo,
+    .solucoes__paragrafo{
+        font-size: var(--texto-3xl);
     }
 
-    .contato_titulo{
-        font-size: var(--texto-2xl); 
+    .cardapio-digital__card__paragrafo{
+        font-size: var(--texto-3xl);
     }
-    .final{
-        font-size: var(--texto-x1); 
-    }
-
 }
     

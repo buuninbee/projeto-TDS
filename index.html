@@ -10,165 +10,205 @@
 </head>
 
 <body>
-  <header>
-    <nav class="menu">
-    <img src="./assets/logo-waiter.svg" alt="logo">
-    <div class="menu_container">
-    <ul class="menu_list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Qr-code</a></li>
-      <li><a href="#">Cardápio web</a></li>
-    </ul>
-    <a href="#" class="menu_link"><img src="./assets/menu-aberto.svg" alt="menu-aberto"></a>
-      <a href="#" class="menu_link"><img src="./assets/menu-fechado.svg" alt="menu-fechado"></a>
-  </div>
-</nav>
+  <header class="header">
+    <nav class="header__nav">
+      <div class="header__logo">
+        <a href="./index.html">
+          <img src="./assets/logo-waiter.svg" alt="logo waiter">
+        </a>
+      </div>
+
+      <div class="header__links">
+        <ul class="header__list">
+          <li class="header__item"><a href="./index.html">Home</a></li>
+          <li class="header__item"><a href="./pages/qr-code.html">Qr-code</a></li>
+          <li class="header__item"><a href="./pages/exemplo-cadarpio.html">Cardápio web</a></li>
+        </ul>
+
+        <a class="header__mobile-button" onclick="menuOpen()">
+          <img src="./assets/menu-aberto.svg" alt="botão pra abrir o menu">
+        </a>
+      </div>
+    </nav>
+
+    <div id="navP" class="header__menu">
+      <div>
+        <button class="header__menu-close" onclick="menuClose()">
+          <img class="w-6" src="./assets/menu-fechado.svg" alt="fechar menu">
+        </button>
+      </div>
+
+      <ul class="header__menu-list">
+        <li class="header__item"><a href="./index.html">Home</a></li>
+        <li class="header__item"><a href="./pages/qr-code.html">Qr-code</a></li>
+        <li class="header__item"><a href="./pages/exemplo-cadarpio.html">Cardápio web</a></li>
+      </ul>
+    </div>
   </header>
+
   <main>
-    <div class="main_intro">
-      <h1 class="main_intro_titulo">
+    <section class="intro">
+      <h1 class="intro__titulo">
         Transforme a experiência dos seus clientes com a digitalização do seu
         restaurante!
       </h1>
-      <p class="main_intro_paragrafo">
+      <p class="intro__paragrafo">
         Ganhe tempo, corte despesas, aumente suas vendas e ofereça uma
         experiência superior aos seus clientes com cardápios digitais e
         análises exclusivas.
       </p>
-    </div>
-    <div class="main_first">
-      <h2 class="main_first_titulo">
+    </section>
+
+    <section class="problemas">
+      <h2 class="problemas__titulo">
         Problemas comuns que pode estar enfrentando
       </h2>
-      <div class="main_first_container">
-        <div class="main_first_card">
+
+      <div class="problemas__cards">
+        <div class="problemas__card">
           <img src="assets/emoji-chorando.gif" alt="emoji-chorando">
-          <p class="main_first_card_paragrafo">
+          <p class="problemas__paragrafo">
             É difícil saber quais pratos são mais populares para planejar
             promoções?
           </p>
         </div>
-        <div class="main_first_card">
+        <div class="problemas__card">
           <img src="./assets/emoji-bufando.gif" alt="emoji-bufando">
-          <p class="main_first_card_paragrafo">
+          <p class="problemas__paragrafo">
             Dificuldade em organizar os pedidos dos seus clientes?
           </p>
         </div>
-        <div class="main_first_card">
+        <div class="problemas__card">
           <img src="./assets/emoji-raiva.gif" alt="emoji-raiva">
-          <p class="main_first_card_paragrafo">
+          <p class="problemas__paragrafo">
             Não consegue medir o impacto de mudanças no cardápio?
           </p>
         </div>
-        <div class="main_first_card">
+        <div class="problemas__card">
           <img src="./assets/emoji-chorando-as-berros.gif">
-          <p class="main_first_card_paragrafo">
+          <p class="problemas__paragrafo">
             Impressão de cardápios consome tempo e dinheiro?
           </p>
         </div>
       </div>
-    </div>
-    <div class="main_second">
-      <h2 class="main_second_titulo">
+    </section>
+
+    <section class="solucoes">
+      <h2 class="solucoes__titulo">
         Sabemos o que você enfrenta e estamos prontos para apoiar
       </h2>
-      <div class="main_second_container">
-        <div class="main_second_card">
+
+      <div class="solucoes__cards">
+        <div class="solucoes__card">
           <img src="./assets/emoji-rosto-maravilhado.gif" alt="emoji-rosto-maravilhado">
-          <p class="main_second_card_paragrafo">
+          <p class="solucoes__paragrafo">
             Centralize todos os pedidos no seu WhatsApp ou painel de gestão.
           </p>
         </div>
-        <div class="main_second_card">
+        <div class="solucoes__card">
           <img src="assets/emoji-contente.gif" alt="emoji-contente">
-          <p class="main_second_card_paragrafo">
+          <p class="solucoes__paragrafo">
             Diga adeus aos gastos com papel! Digitalize seu cardápio e faça
             atualização.
           </p>
         </div>
-        <div class="main_second_card">
+        <div class="solucoes__card">
           <img src="./assets/emoji-comemoracao.gif">
-          <p class="main_second_card_paragrafo">
+          <p class="solucoes__paragrafo">
             Acompanhe métricas de acessos e preferências e saiba o que está
             funcionando.
           </p>
         </div>
 
-        <div class="main_second_card">
+        <div class="solucoes__card">
           <img src="./assets/emoji-rosto-com-oculos.gif" alt="emoji-rosto-com-oculos">
-          <p class="main_second_card_paragrafo">
+          <p class="solucoes__paragrafo">
             Organiza seu cardápio de forma simples e intuitiva, melhorando a
             experiência do cliente.
           </p>
         </div>
       </div>
-    </div>
-    <div class="main_third">
-      <h2 class="main_third_titulo">
+    </section>
+
+    <section class="melhor-restaurante">
+      <h2 class="melhor-restaurante__titulo">
         O melhor para seu restaurante, tudo em um só lugar!
       </h2>
-      <div class="main_third_container">
-        <div class="main_third_card">
+      <div class="melhor-restaurante__cards">
+        <div class="melhor-restaurante__card">
           <img src="./assets/foto-cadarpio-web.png" alt="cardapio-cel" class="main_third_imagem" />
-          <h3 class="main_third_card_titulo">
-            Cardápio digital sempre atualizado
-          </h3>
-          <p class="main_third_card_paragrafo">
-            Menu interativo para o cliente visualizar e pedir diretamente do
-            celular
-          </p>
-          <div class="seta">
-            <a href="#">Ver Mais</a>
-            <img src="./assets/seta-direita.svg" alt="seta-direita">
+          <div class="melhor-restaurante__textos">
+            <h3 class="melhor-restaurante__sub-titulo">
+              Cardápio digital sempre atualizado
+            </h3>
+            <p class="melhor-restaurante__paragrafo">
+              Menu interativo para o cliente visualizar e pedir diretamente do
+              celular
+            </p>
           </div>
+          <a href="#" class="melhor-restaurante__ver-mais">
+            <p class="ver-mais__texto">Ver Mais</p>
+            <img src="./assets/seta-direita.svg" alt="seta-direita">
+          </a>
         </div>
-        <div class="main_third_card">
-          <img src="./assets/graficos-da-home.png" alt="grafico" class="main_third_imagem"/>
-          <h3 class="main_third_card_titulo">
-            Entenda o que seus clientes amam
-          </h3>
-          <p class="main_third_card_paragrafo">
-            Descubra quais pratos são mais visualizados e tome decisões
-            estratégicas com base em dados reais.
-          </p>
-          <div class="seta">
-            <a href="#">Ver Mais</a>
-            <img src="./assets/seta-direita.svg" alt="seta-direita">
+
+        <div class="melhor-restaurante__card">
+          <img src="./assets/graficos-da-home.png" alt="grafico" class="main_third_imagem" />
+          <div class="melhor-restaurante__textos">
+            <h3 class="melhor-restaurante__sub-titulo">
+              Entenda o que seus clientes amam
+            </h3>
+            <p class="melhor-restaurante__paragrafo">
+              Descubra quais pratos são mais visualizados e tome decisões
+              estratégicas com base em dados reais.
+            </p>
           </div>
+          <a href="#" class="melhor-restaurante__ver-mais">
+            <p class="ver-mais__texto">Ver Mais</p>
+            <img src="./assets/seta-direita.svg" alt="seta-direita">
+          </a>
         </div>
       </div>
-    </div>
-    <div class="main_fourth">
-      <h2 class="main_fourth_titulo">
+    </section>
+
+    <section class="cardapio-digital">
+      <h2 class="cardapio-digital__titulo">
         Com os nossos Cardápios Digitais você pode...
       </h2>
-      <div class="main_fourth_container">
-        <div class="main_fourth_card">
+
+      <div class="cardapio-digital__cards">
+        <div class="cardapio-digital__card">
           <img src="./assets/icone-feliz.svg" alt="icone-feliz">
-          <p class="main_fourth_card_paragrafo">
+          <p class="cardapio-digital__card__paragrafo">
             Transforme a interação com seus clientes em algo mais interativo
           </p>
         </div>
-        <div class="main_fourth_card">
+        <div class="cardapio-digital__card">
           <img src="./assets/icone-rapidez.svg" alt="icone-rapidez">
-          <p class="main_fourth_card_paragrafo">
+          <p class="cardapio-digital__card__paragrafo">
             Automatize processos para agilizar e organizar o seu serviço
           </p>
         </div>
       </div>
-    </div>
-    <div class="button_fixed">
+    </section>
+
+    <section class="button_fixed">
       <button type="button"><img src="./assets/icone-whatsApp.svg" alt="icone-whatsapp"></button>
-    </div>
+    </section>
   </main>
-  <footer class="rodape">
-    <h2>Junte-se a nós e simplifique a gestão do seu restaurante</h2>
-    <div class="contato">
-      <p class="contato_titulo">Fale com a gente</p>
-      <p class="contato_tel">61 9999-9999</p>
-      <p class="contato_email">project@gmail.com</p>
+  <footer>
+    <div class="rodape">
+      <h2 class="rodape__titulo">Junte-se a nós e simplifique a gestão do seu restaurante</h2>
+      <div class="contato">
+        <h3 class="contato__titulo">Fale com a gente</h3>
+        <div class="contato-meios">
+          <a href="tel:project@gmail.com" class="contato-meios__tel">61 99999999</a>
+          <a href="mailto:project@gmail.com" class="contato-meios__email">project@gmail.com</a>
+        </div>
+      </div>
+
+      <p class="final">© 2025 - Todos os direitos reservados</p>
     </div>
-    <p class="final">© 2025 - Todos os direitos reservados</p>
   </footer>
 </body>
 
