@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">O sistema Waiter é um aplicativo e site de gestao de restaurantes. Tendo como inspiração os softwares que buscam cardapios online atraves de um QRCode, apresentando também o acrescimo de funcionalidades, como a possibilidade de realizar o pedidos atraves da sistema.</h4>
+<h4 align="center">O sistema Waiter é um aplicativo e site de gestão de restaurantes. Tendo como inspiração os softwares que buscam cardápios online através de um QRCode, apresentando também o acréscimo de funcionalidades, como a possibilidade de realizar o pedidos, avaliar pratos e serviço através do sistema.</h4>
 
 <p align="center">
   <a href="#Metodologias">Metodologias</a> •
@@ -15,7 +15,7 @@
 
 ## Tecnologias
 
-Este projeto utiliza os seguintes software:
+Este projeto utiliza os seguintes softwares:
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
