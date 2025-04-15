@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio exemplo</title>
+    <link rel="stylesheet" href="../styles/cadarpio-web.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../assets/logo-waiter.svg" alt="logo waiter">
+                </a>
+            </div>
+
+            <div class="header__links">
+                <ul class="header__list">
+                    <li class="header__item"><a href="../index.html">Home</a></li>
+                    <li class="header__item"><a href="../pages/qr-code.html">Qr-code</a></li>
+                    <li class="header__item"><a href="../pages/exemplo-cadarpio.html">Cardápio web</a></li>
+                </ul>
+
+                <a class="header__mobile-button" onclick="menuOpen()">
+                    <img src="../assets/menu-aberto.svg" alt="botão pra abrir o menu">
+                </a>
+            </div>
+        </nav>
+
+        <div id="navP" class="header__menu">
+            <div>
+                <button class="header__menu-close" onclick="menuClose()">
+                    <img class="w-6" src="./assets/menu-fechado.svg" alt="fechar menu">
+                </button>
+            </div>
+
+            <ul class="header__menu-list">
+                <li class="header__item"><a href="./index.html">Home</a></li>
+                <li class="header__item"><a href="./pages/qr-code.html">Qr-code</a></li>
+                <li class="header__item"><a href="./pages/exemplo-cadarpio.html">Cardápio web</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="veja-cardapio">
+            <h1 class="veja-cardapio__titulo">Veja como seu cadárpio vai aparecer</h1>
+            <p class="veja-cardapio__paragrafo">QR Code: Aponte a câmera do smartphone</p>
+
+            <div class="qr-imagem">
+                <img src="../assets/qr-code.svg" alt="">
+            </div>
+
+            <h2 class="veja-cardapio__sub-titulo">Link para compartilhar: acesse o cardápio online web</h2>
+            <a class="ver-cardapio--primary" href="">Ver cardápio web</a>
+        </section>
+
+        <section class="duvidas">
+            <h2 class="duvidas__titulo">Duvida sobre a gente? Temos as repostas</h2>
+
+            <div class="duvidas__accordion">
+                <div class="accordion">
+                    <details class="accordion__item" open>
+                        <summary class="accordion__summary">
+                            <h2 class="accordion__summary__titulo">A ferramenta tem suporte?</h2>
+                            <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="#e7bfb0">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="accordion__summary__resposta">
+                            Sim, contate-nos pelo e-mail card@cardapin.com
+                        </p>
+                    </details>
+
+                    <details class="accordion__item" open>
+                        <summary class="accordion__summary">
+                            <h2 class="accordion__summary__titulo">Eu poderei adicionar fotos no meu cardápio?</h2>
+                            <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="#e7bfb0">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="accordion__summary__resposta">
+                            Sim, no plano premium você terá a possibilidade de adicionar todas as fotos de seus
+                            produtos, aumentando a taxa de conversão.
+                        </p>
+                    </details>
+
+                    <details class="accordion__item" open>
+                        <summary class="accordion__summary">
+                            <h2 class="accordion__summary__titulo">Quais são as vantagens do Cardápio Digital?</h2>
+                            <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="#e7bfb0">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="accordion__summary__resposta">
+                            O Cardápio Digital oferece uma experiência ágil e agradável para os clientes, que podem
+                            fazer seus pedidos sem precisar esperar o garçom, reduzindo erros e agilizando o
+                            atendimento. Além disso, a interface inteligente do Cardápio Digital sugere itens adicionais
+                            de forma estratégica, aumentando o ticket médio e ajudando o restaurante a elevar seu
+                            faturamento. </p>
+                    </details>
+
+                    <details class="accordion__item" open>
+                        <summary class="accordion__summary">
+                            <h2 class="accordion__summary__titulo"> Com o Cardápio Digital, ainda preciso de
+                                garçons?</h2>
+                            <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="#e7bfb0">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="accordion__summary__resposta">
+                            Sim, mas sua equipe dificilmente precisará ser ampliada em dias de mais movimento, por
+                            exemplo. O Cardápio Digital automatiza o processo de pedidos, e os garçons se concentram na
+                            entrega dos pratos, nos esclarecimentos e sugestões, melhorando o relacionamento com os
+                            clientes
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <h2 class="rodape__titulo">Junte-se a nós e simplifique a gestão do seu restaurante</h2>
+            <div class="contato">
+                <h3 class="contato__titulo">Fale com a gente</h3>
+                <div class="contato-meios">
+                    <a href="tel:project@gmail.com" class="contato-meios__tel">61 99999999</a>
+                    <a href="mailto:project@gmail.com" class="contato-meios__email">project@gmail.com</a>
+                </div>
+            </div>
+
+            <p class="final">© 2025 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+
+</html>
