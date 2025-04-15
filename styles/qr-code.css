@@ -1,0 +1,207 @@
+@import "../reset.css";
+
+
+body {
+    background-color: var(--terciario-300);
+    box-sizing: border-box;
+
+}
+
+.conteiner {
+    /* aqui é o css do conteiner*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 24px;
+
+}
+
+header {
+    /*Aqui eu fiz o cabeçalho*/
+    background-color: var(--primario-700);
+    color: white;
+    font-family: var(--font-sans);
+    padding: 20px;
+
+}
+
+main {
+    margin: 0 32px;
+
+}
+
+.conteiner__titulo {
+    /*aqui foi feito o css do titulo da div main*/
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+    text-align: center;
+    color: var(--primario-900);
+    font-size: var(--text-2xl);
+    padding-bottom: 16px;
+}
+
+.conteiner__paragrafo {
+    /*Aqui é o css do poaragrafo do canteiner*/
+    font-size: var(--text-base);
+    text-align: center;
+    font-family: var(--font-serif);
+    color: var(--primario-900);
+}
+
+.gif {
+    text-align: center;
+    /*aqui e a edição do gif qr-code*/
+
+}
+
+.vantagens-cardapio {
+    /*aqui esta a edição do card vanategns do cardapio */
+    border-radius: 6px;
+    background-color: var(--primario-600);
+    display: grid;
+    place-items: center;
+
+}
+
+.vantagens-cardapio__titulo {
+    /*aqui esta css do titulo do card vantagens do cardapio*/
+    font-size: var(--text-xl);
+    padding: 34px 12px;
+    color: var(--terciario-50);
+    font-family: var(--font-sans);
+    text-align: center;
+
+}
+
+.vantagens-cardapio__qualidades {
+    display: grid;
+    gap: 12px;
+    padding: 0 30px;
+
+}
+
+.paragrafo-cardapio__qualidade {
+    /*aqui e css da fonte do  primeiro paragrafo qualidade do cardapio */
+
+    font-family: var(--font-serif);
+    color: var(--terciario-50);
+}
+
+.mulher-com-celular {
+    padding: 28px 0;
+
+}
+
+.vantagens-cardapio__qualidade {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--text-sm);
+    font-family: var(--font-sans);
+
+}
+
+.invista-no {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 24px;
+    font-family: var(--font-sans);
+}
+
+.invista-no__titulo {
+    display: grid;
+    font-family: var(--font-sans);
+    font-size: var(--text-2xl);
+    text-align: center;
+    padding-bottom: 32px;
+    color: var(--primario-900)
+}
+
+.inivista-no__ideia {
+    background-color: var(--terciario-900);
+    border-radius: 8px;
+    padding: 22px 18px;
+    gap: 8px;
+    display: grid;
+}
+
+.invista-no__cardapio-digital {
+    display: grid;
+    gap: 16px;
+}
+
+.cardapio-digital__ideia {
+    display: grid;
+    font-size: var(--texto-xl);
+    gap: 8px;
+    background-color: var(--terciario-900);
+    font-family: var(--font-sans);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cardapio-digital__titulo {
+    color: var(--terciario-200);
+    font-size: var(--texto-xl);
+}
+
+.cardapio-digital__wrapper {
+    display: grid;
+    gap: 10px;
+}
+
+.cardapio-digital__paragrafo {
+    color: var(--terciario-200);
+    font-family: var(--font-serif);
+    font-size: var(--texto-base);
+}
+
+.cardapio-digital__otimizar {
+    background-color: var(--primario-700);
+    border-radius: 8px;
+    gap: 8px;
+    display: grid;
+    padding: 20px;
+}
+
+.cardapio-digital__titulo {
+    color: var(--primario-50);
+    font-size: var(--texto-xl);
+    gap: 8px;
+    font-family: var(--font-sans);
+}
+
+.cardapio-digital__paragrafo {
+    color: var(--primario-50);
+    font-family: var(--font-serif);
+    font-size: var(--texto-base);
+}
+
+
+.cardapio-digital__rodape {
+    background-color: var(--secundario-700);
+    gap: 30px;
+    padding: 40px 0;
+}
+
+
+.cardapio-titulo__rodape {
+    padding:20px;
+    display: grid;
+    font-family: var(--font-sans);
+    font-size: var(--texto-xl);
+    color: #FFFFFF;
+}
+
+.cardapio-paragrafo__rodape {
+    padding: 20px;
+    color: #FFFFFF;
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+}
+
+.cardapio-paragrafo__direitosreservado {
+    text-align: center;
+    color: #FFFFFF;
+}
