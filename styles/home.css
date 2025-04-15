@@ -1,112 +1,5 @@
 @import "../reset.css";
 
-.header {
-    background-color: var(--primario-700);
-    width: 100%;
-    position: fixed;
-}
-  
-.header__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 28px;
-    position: relative;
-}
-
-.header__item a{
-    color: var(--primario-50);
-}
-  
-.header__logo img {
-    max-width: 100%;
-}
-  
-.header__links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-  
-.header__menu {
-    display: none;
-}
-  
-.header__menu--open {
-    display: flex;
-}
-  
-.header__list {
-    display: flex;
-    gap: 1rem;
-    font-family: sans-serif;
-    font-size: 1.25rem;
-}
-  
-.header__item {
-    transition: color 0.3s ease-in-out;
-    list-style: none;
-}
-
-.header__item a {
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-  
-
-.header__item:hover {
-color: var(--color-on-primary);
-}
-
-.header__cart {
-position: relative;
-margin-right: 0.75rem;
-}
-
-.header__cart-count {
-background-color: var(--color-primary);
-color: var(--color-on-primary);
-font-size: 10px;
-padding: 2px 6px;
-border-radius: 9999px;
-position: absolute;
-left: 1rem;
-bottom: 1rem;
-}
-
-.header__mobile-button {
-display: none;
-}
-
-@media (max-width: 1024px) {
-.header__list {
-    display: none;
-}
-
-.header__mobile-button {
-    display: block;
-    background-color: var(--primario-700);
-}
-
-.header__menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--color-secondary-container);
-    padding: 1.5rem;
-    z-index: 50;
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.header__menu--open {
-    display: flex;
-}
-}
-
 body{
     background-color: var(--terciario-400);
 }
@@ -290,55 +183,6 @@ body{
     font-family: var(--font-serif);
 }
 
-footer{
-    background-color: var(--secundario-700);
-    color: var(--terciario-50);
-}
-
-.rodape{
-    display: grid;
-    padding: 40px 30px;
-}
-
-.rodape__titulo{
-    font-size: var(--texto-xl);
-    padding-bottom: 30px;
-}
-
-.contato{
-    flex-direction: column;
-    display: flex;
-    font-family: var(--font-sans);
-    font-size: 12px;
-    gap: 10px;
-}
-
-.contato__titulo{
-    font-family: var(--font-serif);
-    font-size: var(--texto-xl);
-}
-
-.contato-meios{
-    display: grid;
-    margin-bottom: 30px;
-}
-
-.contato-meios__tel, .contato-meios__email{
-    text-decoration: none;
-    font-size: var(--texto-base);
-    color: var(--primario-50);
-}
-.final{
-    font-family: var(--font-serif);
-    text-align: center;
-}
-
-.button_fixed{
-    position: relative;
-    display: flex;
-    justify-content: end;
-    margin: 30px;
-}
 .button_fixed button{
     position: fixed;
     bottom: 30px;
@@ -349,7 +193,7 @@ footer{
 }
 
 @media screen and (min-width: 640px){
-    .intro__titulo, .problemas__titulo, .solucoes__titulo, .melhor-restaurante__titulo, .cardapio-digital__titulo, .rodape__titulo{
+    .intro__titulo, .problemas__titulo, .solucoes__titulo, .melhor-restaurante__titulo, .cardapio-digital__titulo{
         font-size: var(--texto-3xl);
     }
 
@@ -417,7 +261,7 @@ footer{
 }
 
 @media screen and (min-width: 1024px) {
-    .intro, .problemas, .solucoes, .melhor-restaurante, .cardapio-digital, .rodape{
+    .intro, .problemas, .solucoes, .melhor-restaurante, .cardapio-digital{
         margin: 0 72px;
         max-width: 1024px;
         justify-self: center;

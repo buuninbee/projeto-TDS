@@ -1,5 +1,111 @@
 @import "../reset.css";
 
+.header {
+    background-color: var(--primario-700);
+    width: 100%;
+    position: fixed;
+}
+  
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 28px;
+    position: relative;
+}
+
+.header__item a{
+    color: var(--primario-50);
+}
+  
+.header__logo img {
+    max-width: 100%;
+}
+  
+.header__links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+  
+.header__menu {
+    display: none;
+}
+  
+.header__menu--open {
+    display: flex;
+}
+  
+.header__list {
+    display: flex;
+    gap: 1rem;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}
+  
+.header__item {
+    transition: color 0.3s ease-in-out;
+    list-style: none;
+}
+
+.header__item a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+  
+
+.header__item:hover {
+color: var(--color-on-primary);
+}
+
+.header__cart {
+position: relative;
+margin-right: 0.75rem;
+}
+
+.header__cart-count {
+background-color: var(--color-primary);
+color: var(--color-on-primary);
+font-size: 10px;
+padding: 2px 6px;
+border-radius: 9999px;
+position: absolute;
+left: 1rem;
+bottom: 1rem;
+}
+
+.header__mobile-button {
+display: none;
+}
+
+@media (max-width: 1024px) {
+.header__list {
+    display: none;
+}
+
+.header__mobile-button {
+    display: block;
+    background-color: var(--primario-700);
+}
+
+.header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-secondary-container);
+    padding: 1.5rem;
+    z-index: 50;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header__menu--open {
+    display: flex;
+}
+}
 
 body {
     background-color: var(--terciario-300);
@@ -12,16 +118,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 24px;
-
-}
-
-header {
-    /*Aqui eu fiz o cabeçalho*/
-    background-color: var(--primario-700);
-    color: white;
-    font-family: var(--font-sans);
-    padding: 20px;
+    padding-top: 102px;
 
 }
 
@@ -32,20 +129,19 @@ main {
 
 .conteiner__titulo {
     /*aqui foi feito o css do titulo da div main*/
-    box-sizing: border-box;
+    color: var(--primario-900);
+    font-size:  var(--texto-xl);
+    margin-bottom: 20px;
     font-family: var(--font-sans);
     text-align: center;
-    color: var(--primario-900);
-    font-size: var(--text-2xl);
-    padding-bottom: 16px;
 }
 
 .conteiner__paragrafo {
     /*Aqui é o css do poaragrafo do canteiner*/
-    font-size: var(--text-base);
     text-align: center;
     font-family: var(--font-serif);
     color: var(--primario-900);
+    font-size: var(--texto-lg);
 }
 
 .gif {
@@ -60,7 +156,7 @@ main {
     background-color: var(--primario-600);
     display: grid;
     place-items: center;
-
+    margin-bottom: 30px;
 }
 
 .vantagens-cardapio__titulo {
@@ -104,15 +200,15 @@ main {
 .invista-no {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    font-size: 24px;
     font-family: var(--font-sans);
+    margin-bottom: 30px;
+
 }
 
 .invista-no__titulo {
     display: grid;
     font-family: var(--font-sans);
-    font-size: var(--text-2xl);
+    font-size: var(--texto-2xl);
     text-align: center;
     padding-bottom: 32px;
     color: var(--primario-900)
@@ -172,36 +268,59 @@ main {
     font-family: var(--font-sans);
 }
 
-.cardapio-digital__paragrafo {
-    color: var(--primario-50);
-    font-family: var(--font-serif);
-    font-size: var(--texto-base);
+@media screen and (min-width: 640px) {
+    .conteiner__titulo, .vantagens-cardapio__titulo, .invista-no__titulo{
+        font-size: var(--texto-3xl);
+        font-family: var(--font-sans);
+    }
+
+    .conteiner__paragrafo, .cardapio-digital__titulo{
+        font-family: var(--font-serif);
+        font-size: var(--texto-2xl);
+    }
+
+    .paragrafo-cardapio__qualidade{
+        font-family: var(--font-serif);
+        font-size: var(--texto-xl);
+    }
 }
 
+@media screen and (min-width: 768px) {
+    .vantagens-cardapio{
+        padding: 0 72px;
+    }
 
-.cardapio-digital__rodape {
-    background-color: var(--secundario-700);
-    gap: 30px;
-    padding: 40px 0;
+    .mulher-com-celular img{
+        width: 300px;
+        height: auto;
+    }
+    
+    .cardapio-digital__titulo{
+        font-size: var(--texto-3xl);
+    }
+
+    .cardapio-digital__paragrafo{
+        font-size: var(--text-xl);
+    }
+
+    .gif img{
+        width: 350px;
+    }
 }
 
+@media screen and (min-width: 1024px) {
+    .conteiner, .vantagens-cardapio, .invista-no{
+        margin: 0 72px;
+        max-width: 1024px;
+        justify-self: center;
+        margin-bottom: 60px;
+    }
 
-.cardapio-titulo__rodape {
-    padding:20px;
-    display: grid;
-    font-family: var(--font-sans);
-    font-size: var(--texto-xl);
-    color: #FFFFFF;
-}
+    .conteiner__titulo, .vantagens-cardapio__titulo, .invista-no__titulo{
+        font-size: var(--texto-4xl);
+    }
 
-.cardapio-paragrafo__rodape {
-    padding: 20px;
-    color: #FFFFFF;
-    font-family: var(--font-serif);
-    font-size: var(--text-xl);
-}
-
-.cardapio-paragrafo__direitosreservado {
-    text-align: center;
-    color: #FFFFFF;
+    .paragrafo-cardapio__qualidade{
+        font-size: var(--texto-2xl);
+    }
 }

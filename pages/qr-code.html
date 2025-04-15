@@ -4,16 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> qr-code </title>
+    <title>Qr-code</title>
     <link rel="stylesheet" href="../styles/qr-code.css">
 </head>
 
 <body>
-    <header>
-        <h1>Waiter</h1>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../assets/logo-waiter.svg" alt="logo waiter">
+                </a>
+            </div>
+
+            <div class="header__links">
+                <ul class="header__list">
+                    <li class="header__item"><a href="../index.html">Home</a></li>
+                    <li class="header__item"><a href="../pages/qr-code.html">Qr-code</a></li>
+                    <li class="header__item"><a href="../pages/exemplo-cadarpio.html">Cardápio web</a></li>
+                </ul>
+
+                <a class="header__mobile-button" onclick="menuOpen()">
+                    <img src="../assets/menu-aberto.svg" alt="botão pra abrir o menu">
+                </a>
+            </div>
+        </nav>
+
+        <div id="navP" class="header__menu">
+            <div>
+                <button class="header__menu-close" onclick="menuClose()">
+                    <img class="w-6" src="../assets/menu-fechado.svg" alt="fechar menu">
+                </button>
+            </div>
+
+            <ul class="header__menu-list">
+                <li class="header__item"><a href="./index.html">Home</a></li>
+                <li class="header__item"><a href="./pages/qr-code.html">Qr-code</a></li>
+                <li class="header__item"><a href="./pages/exemplo-cadarpio.html">Cardápio web</a></li>
+            </ul>
+        </div>
     </header>
+
     <main>
-        <div class="conteiner">
+        <section class="conteiner">
             <h2 class="conteiner__titulo">Crie o seu cardápio em Qr-code</h2>
             <p class="conteiner__paragrafo">Ganhe tempo, corte despesas, aumente suas vendas e ofereça uma experiência
                 superior aos seus clientes com cardápio digitais e análises exclusivas.</p>
@@ -21,9 +54,9 @@
             <div class="gif">
                 <img src="../assets/qr-code.gif" alt="gif">
             </div>
-        </div>
+        </section>
 
-        <div class="vantagens-cardapio">
+        <section class="vantagens-cardapio">
             <h2 class="vantagens-cardapio__titulo">Não se trata de um PDF! É uma solução de autoatendimento</h2>
 
             <div class="vantagens-cardapio__qualidades">
@@ -41,9 +74,9 @@
             <div class="mulher-com-celular">
                 <img src="../assets/mulher-com-celular.png" alt="mulher-com-celular">
             </div>
-        </div>
+        </section>
 
-        <div class="invista-no">
+        <section class="invista-no">
             <h2 class="invista-no__titulo">Invista no cardápio Digital em QR Code hoje mesmo se você quer</h2>
 
 
@@ -59,7 +92,7 @@
                 </div>
 
                 <div class="cardapio-digital__otimizar">
-                    <div >
+                    <div>
                         <img src="../assets/icone-rapidez.svg" alt="icone-rapidez">
                         <h2 class="cardapio-digital__titulo">Otimizar a operação do seu restaurante.</h2>
                     </div>
@@ -68,21 +101,21 @@
                         fiacaram livres para dar atenção para os clientes.</p>
                 </div>
             </div>
+        </section>
     </main>
 
     <footer>
-        <div class="cardapio-digital__rodape">
-            <h2 class="cardapio-titulo__rodape">Junte-se a nós e simplifique a gestão do seu restaurante</h2>
-
-            <div class="cardapio-paragrafo__rodape">
-                <p>Fale com a gente</p>
-                <p>(61) 99999-9999</p>
-                <p> project@gmail.com</p>
+        <div class="rodape">
+            <h2 class="rodape__titulo">Junte-se a nós e simplifique a gestão do seu restaurante</h2>
+            <div class="contato">
+                <h3 class="contato__titulo">Fale com a gente</h3>
+                <div class="contato-meios">
+                    <a href="tel:project@gmail.com" class="contato-meios__tel">61 99999999</a>
+                    <a href="mailto:project@gmail.com" class="contato-meios__email">project@gmail.com</a>
+                </div>
             </div>
 
-            <div class="cardapio-paragrafo__direitosreservado">
-                <p>©2025 - Todos os direitos reservados</p>
-            </div>
+            <p class="final">© 2025 - Todos os direitos reservados</p>
         </div>
     </footer>
 </body>
