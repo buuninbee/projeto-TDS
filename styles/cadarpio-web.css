@@ -1,166 +1,179 @@
 @import "../reset.css";
 
-body {
-    background-color: var(--terciario-300);
+body{
+    background-color: #E4E490;
 }
 
-.veja-cardapio{
-    padding-top: 102px;
+.navegacao-inicial{
+    display: grid;
+    justify-items: center;
+    background-color: var(--primario-700);
+    padding: 122px 30px;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.navegacao-inicial__titulo{
+    text-align: center;
+    font-size: var(--texto-2xl);
+    font-family: var(--font-sans);
+    color: var(--terciario-50);
+}
+
+.menu-inicial{
+    display: grid;
+    gap: 16px;
+}
+
+.menu-inicial__botao{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 50px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: var(--secundario-100);
+    color: var(--secundario-900);
+}
+
+.menu-inicial__texto{
+    font-size: var(--texto-xl);
+}
+
+.menu-inicial__icone{
+    width: 34px;
+}
+
+.cadarpio__navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.cardapio-card{
+    display: grid;
+    justify-content: center;
+    padding: 24px 20px;
+    align-items: center;
+    background-color: var(--terciario-50);
+    border-radius: 12px;
+}
+
+.cadarpio__link{
+    text-decoration: none;
+    font-size: var(--texto-xl);
+    color: var(--secundario-900);
+}
+
+.cadarpio{
     display: grid;
     margin: 0 30px;
-    text-align: center;
-    justify-items: center;
-    padding-bottom: 30px;
-}
-
-.veja-cardapio__titulo{
-    color: var(--primario-900);
-    font-size:  var(--texto-2xl);
-    font-family: var(--font-sans);
     padding-bottom: 16px;
 }
 
-.veja-cardapio__paragrafo{
-    color: var(--primario-900);
+.cardapio-card__titulo{
+    text-align: center;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--primario-100);
+    font-size: var(--texto-xl);
+    color: var(--secundario-900);
+}
+
+.cardapio-card__subtitulo{
+    font-size: var(--texto-2xl);
+    font-family: var(--font-sans);
+    color: var(--secundario-900);
+    padding-bottom: 6px;
+}
+
+.cardapio-card__descricao{
+    font-size: var(--texto-base);
+    color: var(--secundario-600);
+    padding-bottom: 16px;
+}
+
+.cardapio-acompanhamento{
+    padding-bottom: 16px;
+}
+
+.cardapio-acompanhamento__titulo{
     font-size: var(--texto-lg);
-    padding-bottom: 22px;
-}
-
-.veja-cardapio__sub-titulo{
-    font-size: var(--texto-sm);
     font-family: var(--font-serif);
-    padding-bottom: 12px;
+    color: var(--secundario-600);
+    padding-bottom: 6px;
 }
 
-.ver-cardapio--primary{
-    padding: 12px 10px;
+.cardapio-acompanhamento__grupo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secundario-600);
+}
+
+.botao-cardapio--primary{
+    align-items: center;
+    padding: 10px 8px;
     border-radius: 10px;
-    max-width: max-content;
+    text-align: center;
     text-decoration: none;
     font-size: var(--texto-base);
     color: var(--primario-600);
     background-color: var(--primario-100);
 }
 
-.qr-imagem img{
-    width: 150px;
-    height: auto;
-    padding-bottom: 16px;
+
+
+.cardapio-card__img img{
+    width: 100%;
 }
 
-.duvidas{
+#entradas, #bebidas, #aperitivos{
     display: grid;
-    margin: 0 30px;
-    text-align: center;
-    justify-items: center;
-    padding-bottom: 30px;
-}
-
-.duvidas__titulo{
-    color: var(--primario-900);
-    font-size:  var(--texto-2xl);
-    font-family: var(--font-sans);
+    gap: 16px;
     padding-bottom: 16px;
-}
-
-.accordion {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-  
-.accordion__item {
-    border-radius: 8px;
-    overflow: hidden;
-}
-  
-.accordion__summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primario-900);
-    color: var(--terciario-300);
-    padding: 16px;
-    cursor: pointer;
-    list-style: none;
-}
-  
-.accordion__summary::-webkit-details-marker {
-    display: none;
-}
-  
-.accordion__summary__titulo{
-    color: var(--terciario-300);
-    text-align: left;
-    font-size: var(--texto-lg);
-    font-family: var(--font-sans);
-}
-  
-.accordion__icon {
-    width: 1.25rem;
-    height: 1.25rem;
-}
-  
-  .accordion__item[open] .accordion__icon {
-    transform: rotate(-180deg);
-  }
-  
-.accordion__summary__resposta{
-    padding: 16px;
-    text-align: left;
-    color: var(--terciario-300);
-    background-color: var(--primario-900);
-    font-size: var(--texto-sm);
-    font-family: var(--font-serif);
 }
 
 @media screen and (min-width: 640px){
-    .veja-cardapio__titulo, .duvidas__titulo{
+    .navegacao-inicial__titulo{
         font-size: var(--texto-3xl);
     }
 
-    .veja-cardapio__paragrafo, .veja-cardapio__sub-titulo{
+    .cadarpio__link{
         font-size: var(--texto-2xl);
     }
 
-    .ver-cardapio--primary{
-        padding: 14px 12px;
-        font-size: var(--texto-xl);
+    .cardapio-card__titulo{
+        font-size: var(--texto-2xl);
     }
 
-    .accordion__summary{
-        padding: 28px;
-    }
-
-    .accordion__summary__resposta{
-        font-size: var(--texto-lg);
-        padding: 0 28px 28px 28px;
+    .cardapio-card__descricao{
+        font-size: var(--texto-2xl);
     }
 }
 
-@media screen and (min-width: 1024px){
-    .veja-cardapio__titulo, .duvidas__titulo{
+@media screen and (min-width: 1024px) {
+    .navegacao-inicial__titulo{
         font-size: var(--texto-4xl);
     }
 
-    .veja-cardapio__paragrafo, .veja-cardapio__sub-titulo{
-        font-size: var(--texto-3xl);
+    .cadarpio__link{
+        font-size: var(--texto-2xl);
     }
 
-    .veja-cardapio, .duvidas{
+    .cadarpio{
+        margin: 0 72px;
+    }
+
+    #entradas, #bebidas, #aperitivos{
+        gap: 30px;
+        padding-bottom: 16px;
+    }
+
+    .cadarpio{
         margin: 0 72px;
         max-width: 1024px;
         justify-self: center;
         padding-bottom: 60px;
     }
-
-    .qr-imagem img{
-        width: 250px;
-    }
-
-    .ver-cardapio--primary{
-        padding: 20px 16px;
-        font-size: var(--texto-2xl);
-    }
-
 }

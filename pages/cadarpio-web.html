@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadárpio web</title>
+    <link rel="stylesheet" href="../styles/cadarpio-web.css">
+</head>
+
+<body>
+    <main>
+        <section class="navegacao-inicial">
+            <h1 class="navegacao-inicial__titulo">Olá, sejam bem-vindo ao nosso cardapio</h1>
+            <div>
+                <img src="../assets/logo-restaurante-exemplo.png" alt="">
+            </div>
+            <div class="menu-inicial">
+                <a class="menu-inicial__botao" href="#entradas">
+                    <p class="menu-inicial__texto">Nossas entradas</p>
+                    <img class="menu-inicial__icone" src="../assets/seta-direita.svg" alt="">
+                </a>
+
+                <a class="menu-inicial__botao" href="#bebidas">
+                    <p class="menu-inicial__texto">Bebidas</p>
+                    <img class="menu-inicial__icone" src="../assets/seta-direita.svg" alt="">
+                </a>
+
+                <a class="menu-inicial__botao" href="#aperitivos">
+                    <p class="menu-inicial__texto">Aperitivos</p>
+                    <img class="menu-inicial__icone" src="../assets/seta-direita.svg" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="cadarpio">
+            <div class="cadarpio__navegacao">
+                <a class="cadarpio__link" href="#entradas">Entradas</a>
+                <a class="cadarpio__link" href="#bebidas">Bebidas</a>
+                <a class="cadarpio__link" href="#aperitivos">Aperitivos</a>
+            </div>
+
+            <div id="entradas">
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Entradas</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/almoço1.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">Almoço</h2>
+                        <p class="cardapio-card__descricao">Arroz, feijão, macarrão e salada + acompanhamentos</p>
+                    </div>
+
+                    <div class="cardapio-acompanhamento">
+                        <h3 class="cardapio-acompanhamento__titulo">Acompanhamento</h3>
+
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de carne</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de frango</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de linguiça de porco</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de linguiça de frango</label>
+                        </div>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Entradas</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/almoço2.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">Almoço do dia</h2>
+                        <p class="cardapio-card__descricao">Arroz, feijão, macarrão e salada + acompanhamentos</p>
+                    </div>
+
+                    <div class="cardapio-acompanhamento">
+                        <h3 class="cardapio-acompanhamento__titulo">Acompanhamento</h3>
+
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de carne</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de frango</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de linguiça de porco</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de linguiça de frango</label>
+                        </div>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+            </div>
+
+            <div id="bebidas">
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Bebidas</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/bebida2.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">Pepsi</h2>
+                        <p class="cardapio-card__descricao">500 ml</p>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Bebidas</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/bebida1.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">Coca-cola</h2>
+                        <p class="cardapio-card__descricao">500 ml</p>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Bebidas</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/bebida3.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">heinekin</h2>
+                        <p class="cardapio-card__descricao">500 ml</p>
+                    </div>
+
+                    <div class="cardapio-acompanhamento">
+                        <h3 class="cardapio-acompanhamento__titulo">Tamanho</h3>
+
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">1 litro</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">600 ml</label>
+                        </div>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+            </div>
+
+            <div id="aperitivos">
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Aperitivo</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/aperitivo1.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">Churrasquinho</h2>
+                    </div>
+
+                    <div class="cardapio-acompanhamento">
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de carne</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de frango</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de linguiça de porco</label>
+                        </div>
+                        <div class="cardapio-acompanhamento__grupo">
+                            <input type="checkbox" name="acom" id="acom">
+                            <label for="acom">Espetinho de linguiça de frango</label>
+                        </div>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Aperitivo</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/aperitivo2.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">Torresmo</h2>
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <p class="cardapio-card__descricao">Carne de porco</p>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+
+                <div class="cardapio-card">
+                    <h2 class="cardapio-card__titulo">Aperitivo</h2>
+
+                    <div class="cardapio-card__img">
+                        <img src="../assets/aperitivo3.png" alt="">
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <h2 class="cardapio-card__subtitulo">Tilápia frita</h2>
+                    </div>
+
+                    <div class="cardapio-card__texto">
+                        <p class="cardapio-card__descricao">600 g</p>
+                    </div>
+
+                    <a class="botao-cardapio--primary" href="">Adicionar ao carrinho</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

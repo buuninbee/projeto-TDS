@@ -272,6 +272,10 @@ body{
         font-size: var(--texto-4xl);
     }
 
+    .melhor-restaurante{
+        gap: 16px;
+    }
+
     .melhor-restaurante__cards{
         grid-template-columns: repeat(2, auto);
     }
